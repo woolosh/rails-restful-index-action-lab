@@ -1,0 +1,33 @@
+<h1>Students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Students</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |s| %>
+      <tr>
+        <td><%= s.first_name %></td>
+        <td><%= s.last_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Names of all the people</h1>
+<% @students.each do |s| %>
+  Name: <%= s.first_name %> <%= s.last_name%><br/>
+<% end %>
+
+<%= form_tag("/Students", :method => "get") do %>
+   <%= label_tag(:q, "Students:") %>
+   <%= text_field_tag(:q) %>
+   <%= submit_tag("Students") %>
+<% end %>
+
