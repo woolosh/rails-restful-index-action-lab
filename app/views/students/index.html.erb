@@ -1,0 +1,23 @@
+<h1>Students</h1>
+
+render students
+
+<table>
+  <thead>
+    <tr>
+      <th>Students</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |book| %>
+      <tr>
+        <td><%= Student.all %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
